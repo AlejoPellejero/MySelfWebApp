@@ -1,0 +1,238 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --light-orange: rgb(255, 228, 196);
+  --red: rgb(165, 42, 42);
+  --dark-green: rgb(85, 107, 47);
+  --gray: rgb(128, 128, 128);
+  --principal-font: 2.9rem;
+  --font-s: 2rem;
+  --font-xs: 1.2rem;
+}
+
+/* Generals */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Shadows Into Light", cursive;
+  background-color: var(--white);
+  background-image: linear-gradient(to top, #a6d7dd 0%, var(--white) 100%);
+}
+
+main {
+  padding-bottom: 2rem;
+}
+
+h1 {
+  font-size: var(--principal-font);
+}
+
+h2 {
+  font-size: var(--font-s);
+}
+
+h3 {
+  font-size: var(--font-xs);
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+.shadow {
+  box-shadow: 8px 17px 36px 0px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 8px 17px 36px 0px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 8px 17px 36px 0px rgba(0, 0, 0, 0.43);
+  background-color: var(--white);
+  border-radius: 1rem;
+}
+
+/*  1rem = 10px --> html and body matters */
+.titles {
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h2.titles {
+  color: var(--dark-green);
+}
+
+.sub-text {
+  font-size: var(--font-xs);
+  color: var(--light-orange);
+  font-weight: normal;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.buttons {
+  background-color: var(--light-orange);
+  color: var(--white);
+  padding: 1rem 3rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: var(--font-s);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  width: 30%;
+  border: none;
+  cursor: pointer;
+}
+/* Utilities */
+.flex {
+  display: flex;
+}
+
+.align-rigth {
+  justify-content: flex-end;
+}
+
+/* Main Styles */
+.main-navigation {
+  text-align: center;
+  background-color: var(--light-orange);
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--font-s);
+    font-weight: bold;
+    padding: 1.2rem;
+
+    &:hover {
+      background-color: var(--gray);
+    }
+  }
+}
+
+.main-section {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 45rem;
+  position: relative;
+}
+
+.section-container {
+  position: absolute;
+  background-color: var(--black);
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-container h2,
+.section-container p {
+  color: var(--white);
+  margin-top: 6rem;
+}
+
+/* Scroll Snap */
+.services-container,
+.main-navigation,
+.unique-form {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service h3 {
+  color: var(--dark-green);
+  font-weight: normal;
+}
+
+.service p {
+  line-height: 2;
+  text-align: center;
+}
+
+.service .icons {
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--red);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.unique-form {
+  background-color: var(--gray);
+  width: min(60rem, 90%);
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.unique-form fieldset {
+  border: none;
+}
+
+.unique-form legend {
+  text-align: center;
+  font-size: var(--font-s);
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: var(--light-orange);
+  margin-bottom: 2rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  color: var(--white);
+  font-family: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.field textarea {
+  height: 20rem;
+}
+
+.inputs-style {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.send .buttons {
+  width: 100%;
+}
+
+.footer {
+  text-align: center;
+}
